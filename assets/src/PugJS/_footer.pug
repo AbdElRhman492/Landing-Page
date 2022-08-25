@@ -1,0 +1,50 @@
+footer
+  .footer-top
+    .container
+      .footer-brand
+        a(href='#' class='logo')
+          img(src='./assets/images/logo.png' alt = 'funel logo')
+        p.footer-text Follow us on
+        ul.social-list
+          li
+            a.social-link(href='https://github.com/AbdElRhman492' target='_blank')
+              ion-icon(name='logo-github')
+          li
+            a.social-link(href='https://www.linkedin.com/in/abd-el-rhman-nasr-3b9304232/' target='_blank')
+              ion-icon(name='logo-linkedin')
+          li
+            a.social-link(href='https://www.facebook.com/profile.php?id=100023778082232' target='_blank')
+              ion-icon(name='logo-facebook')
+          li
+            a.social-link(href='https://github.com/AbdElRhman492' target='_blank')
+              ion-icon(name='logo-instagram')
+      .footer-link-box
+        ul.footer-link-list
+          li
+            h3.h4.link-title Company
+          each val in ['About us', 'Features', 'Pricing']
+            li
+              a(href='#' class='footer-link')= val
+        ul.footer-link-list Products
+          li
+            h3.h4.link-title
+          each val in ['Blog', 'Help Center', 'Contact']
+            li
+              a(href='#' class='footer-link')= val
+        ul.footer-link-list
+          li
+            h3.h4.link-title Resources
+          each val in ['FAQ’S', 'Testimonial', 'Terms & Conditions']
+            li
+              a(href='#' class='footer-link')= val
+        ul.footer-link-list
+          li
+            h3.h4.link-title Relevent
+          each val in ['Why', 'Products', 'Customers']
+            li
+              a(href='#' class='footer-link')= val
+  .footer-bottom
+    p.copyright
+      | &copy; 2022 
+      a(href='#') @AbdElRhman Nasr 
+      |  All right reserved

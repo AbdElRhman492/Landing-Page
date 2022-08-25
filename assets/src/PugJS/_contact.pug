@@ -1,0 +1,20 @@
+section.contact#contact
+  .container
+    .contact-content
+      h2.h2.section-title Let’s scale your brand, together
+      figure.contact-banner
+        img(src="./assets/images/contact.png", alt="contact banner")
+    form.contact-form(action='')
+      +input-wrapper('Name', 'text', 'name', 'Name')
+      +input-wrapper('Phone', 'tel', 'phone', 'Phone Number')
+      +input-wrapper('Email', 'email', 'email', 'Email Address')
+      .input-wrapper 
+        label(for='message' class='input-label') How can we help? *
+        textarea(
+          name='message'
+          id='message'
+          class='input-field'
+          placeholder='Type Description'
+          required
+          )
+      button.btn.btn-primary(type='submit') Send Message

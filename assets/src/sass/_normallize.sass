@@ -1,0 +1,97 @@
+*,
+*::after,
+*::before
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+li
+  list-style: none
+
+a
+  text-decoration: none
+
+a,
+img,
+button,
+span,
+ion-icon,
+label,
+input,
+textarea
+  display: block
+
+button
+  font: inherit
+  background: none
+  border: none
+  cursor: pointer
+
+textarea,
+input
+  font: inherit
+  background: none
+  border: none
+  width: 100%
+  &:focus
+    outline: none
+
+:focus
+  outline-offset: 4px
+
+html
+  font-family: $ff-poppins
+  scroll-behavior: smooth
+
+body
+  background: $white
+  overflow-x: hidden
+
+::-webkit-scrollbar
+  width: 10px
+  &-track
+    background: $white
+  &-thumb
+    background: hsl(0, 0%, 50%)
+
+.container
+  padding: 0 15px
+
+.h1,
+.h2,
+.h3
+  font-weight: $fw-600
+  line-height: 1.3
+  text-transform: capitalize
+
+.h
+  &1
+    color: $oxford-blue
+    font-size: $fs-1
+  &2
+    font-size: $fs-2
+  &3
+    color: $oxford-blue
+    font-size: $fs-3
+  &4
+    color: $royal-blue-dark
+    font-size: $fs-4
+    font-weight: $fw-600
+
+.btn
+  font-size: $fs-6
+  text-transform: uppercase
+  font-weight: $fw-600
+  padding: 10px 40px
+  border: 1px solid
+  border-radius: 6px
+  &-primary
+    background: $bittersweet
+    border-color: $bittersweet
+    color: $white
+    &:is(:hover, :focus)
+      $bittersweet: hsl(2, 90%, 65%)
+      background: $bittersweet
+      border-color: $bittersweet
+  &-secondary:is(:hover, :focus)
+    background: hsla(0, 0%, 100%, 0.1)

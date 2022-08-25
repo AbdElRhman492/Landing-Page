@@ -1,0 +1,14 @@
+header
+  .container
+    a(href='#' class='logo')
+      img(src='./assets/images/logo.png' alt='Funel logo')
+    .navbar-wrapper
+      button(class='navbar-menu-btn' data-navbar-toggle-btn)
+        ion-icon(name='menu-outline')
+      nav(class='navbar' data-navbar)
+        ul.navbar-list
+          - var navLinks = ['Home', 'What we do', 'Why us', 'Our work', 'Contact']
+          each val in navLinks
+            li.nav-item
+              a(href='#'+val.toLowerCase() class='nav-link')= val
+        button.btn.btn-primary Get in touch

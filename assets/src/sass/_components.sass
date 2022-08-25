@@ -1,0 +1,507 @@
+// Header
+header
+  position: relative
+  padding: 35px 0
+  z-index: 2
+  .container
+    @include flex(space-between, center)
+    .navbar-wrapper
+      .navbar-menu-btn
+        font-size: 30px
+        padding: 5px
+      .navbar
+        position: absolute
+        top: calc( 100% - 15px )
+        left: 15px
+        right: 15px
+        background: $maximum-yellow-red
+        max-height: 0
+        visibility: hidden
+        pointer-events: none
+        transition: $transition
+        transform-origin: top
+        overflow: hidden
+        &.active
+          visibility: visible
+          pointer-events: all
+          max-height: 280px
+          .nav-link
+            transition-delay: 0.2s !important
+            opacity: 1 !important
+        &-list
+          padding: 10px
+          .nav-item:not(:last-child)
+            border-bottom: 1px solid hsla(0, 0%, 100%, 0.2)
+          .nav-item
+            .nav-link
+              font-size: $fs-6
+              color: $royal-blue-dark
+              font-weight: $fw-600
+              padding: 15px 10px
+              opacity: 0
+              transition: opacity $transition
+              &:is(:hover, :focus)
+                background: hsla(0, 0%, 100%, 0.2)
+        .btn-primary
+          display: none
+
+// Hero
+.hero
+  position: relative
+  padding: 130px 0 140px
+  z-index: 1
+  .container
+    .hero-content
+      text-align: center
+      .hero-title
+        margin-bottom: 40px
+      .hero-text
+        margin-bottom: 40px
+        font-size: $fs-4
+        color: $oxford-blue
+      .btn-primary
+        margin-inline: auto
+    .hero-banner
+      display: none
+  .shape-content
+    width: 900px
+    position: absolute
+    top: -230px
+    right: -300px
+    z-index: -1
+@media screen and ( max-width: 550px )
+  .hero
+    overflow: hidden
+
+// About
+.about
+  position: relative
+  z-index: 1
+  background: url("../../images/about-bg.png") no-repeat
+  background-position: center
+  background-size: cover
+  padding: 120px 0
+  text-align: center
+  .container
+    .about-top
+      margin-bottom: 120px
+      .section-title
+        margin-bottom: 20px
+      .section-text
+        color: $white
+        font-size: $fs-4
+        margin-bottom: 60px
+      .about-list
+        display: grid
+        grid-template-columns: 1fr
+        gap: 30px
+        li
+          .about-card
+            background: $white
+            padding: 40px
+            border-radius: 12px
+            box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1)
+            .card-icon
+              color: $bittersweet
+              font-size: 45px
+              width: max-content
+              margin-inline: auto
+              margin-bottom: 15px
+            .card-title
+              margin-bottom: 15px
+            .card-text
+              color: $davys-gray
+    .about-bottom
+      &-banner
+        margin-bottom: 120px
+        img
+          width: 100%
+          height: 100%
+      &-content
+        .section-title
+          margin-bottom: 20px
+        .section-text
+          color: $white
+          font-size: $fs-4
+          margin-bottom: 40px
+        .btn-secondary
+          color: $white
+          margin-inline: auto
+    .h2
+      color: $white
+
+// Features
+.features
+  padding: 120px 0
+  text-align: center
+  .container
+    .section-title
+      color: $royal-blue-dark
+      margin-bottom: 20px
+    .section-text
+      color: $rythm
+      font-size: $fs-4
+      margin-bottom: 120px
+    .features-list
+      .feature-item
+        &-banner
+          max-width: 350px
+          margin-inline: auto
+          margin-bottom: 60px
+          img
+            width: 100%
+        &-content
+          .item-title
+            color: $royal-blue-dark
+            margin-bottom: 20px
+          .item-text
+            color: $rythm
+            font-size: $fs-4
+        &:first-child
+          margin-bottom: 100px
+
+//  CTA
+.cta
+  padding: 120px 0
+  .container
+    .cta
+      &-card
+        background: linear-gradient(to top, $bittersweet, $french-rose)
+        padding: 80px 36px
+        border-radius: 20px
+        text-align: center
+      &-title
+        color: $white
+        font-size: $fs-1
+        font-weight: $fw-600
+        line-height: 1.3
+        margin-bottom: 30px
+      &-text
+        color: $white
+        font-size: $fs-6
+        margin-bottom: 50px
+      &-form
+        input
+          color: $white
+          padding: 10px 15px
+          border-bottom: 1px solid
+          margin-bottom: 30px
+          &::placeholder
+            color: inherit
+        .btn-secondary
+          color: $white
+          margin-inline: auto
+
+// Contact
+.contact
+  margin-bottom: 120px
+  .container
+    .contact-content
+      margin-bottom: 50px
+      .section-title
+        color: $royal-blue-dark
+        margin-bottom: 60px
+        text-align: center
+        font-weight: $fw-500
+      .contact-banner img
+        width: 100%
+    .contact-form
+      .input-wrapper
+        margin-bottom: 30px
+        .input-label
+          color: $oxford-blue
+          font-size: $fs-6
+          font-weight: $fw-600
+          margin-bottom: 10px
+        .input-field
+          border-bottom: 1px solid $platinum
+          padding: 7px 0
+          font-size: $fs-6
+        textarea
+          max-height: 300px
+          min-height: 150px
+          height: 150px
+          resize: vertical
+
+// Footer
+footer
+  background: $white-2
+  .footer-top
+    padding: 80px 0 50px
+    .container
+      .footer-brand
+        margin-bottom: 20px
+        .logo
+          margin-bottom: 30px
+      .footer-text
+        color: $rythm
+        font-size: $fs-6
+        margin-bottom: 20px
+      .social-list
+        @include flex(flex-start, center)
+        gap: 20px
+        li
+          .social-link
+            color: $rythm
+            font-size: $fs-4
+            margin-bottom: 10px
+            &:is(:hover, :focus)
+              color: $french-rose
+      .footer-link-box
+        .footer-link-list
+          &:not(:last-child)
+            margin-bottom: 30px
+          li
+            .link-title
+              margin-bottom: 15px
+            .footer-link
+              color: $cool-gray
+              font-size: $fs-6
+              margin-bottom: 10px
+              max-width: 150px
+              &:is(:hover, :focus)
+                color: $french-rose
+  .footer-bottom
+    padding: 20px 15px
+    border-top: 1px solid hsla(0, 0%, 18%, 0.2)
+    .copyright
+      color: $cool-gray
+      text-align: center
+      font-size: $fs-6
+      a
+        display: inline-block
+        color: $french-rose
+
+// Go To Top
+.go-top
+  position: fixed
+  bottom: 40px
+  right: 40px
+  z-index: 5
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  background: linear-gradient(-45deg, $maximum-yellow-red, $french-rose)
+  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.25)
+  display: grid
+  place-items: center
+  color: $white
+  font-size: 22px
+  opacity: 0
+  visibility: hidden
+  pointer-events: none
+  transition: $transition
+  &.active
+    opacity: 1
+    visibility: visible
+    pointer-events: all
+
+// Responsive For > 450px
+@media screen and (min-width: 450px)
+  .h1
+    font-size: 60px
+  .h1,
+  .h2
+    font-weight: $fw-700 !important
+  .btn
+    padding-block: 15px !important
+  .navbar
+    left: auto !important
+    width: 300px !important
+  .hero
+    padding: 140px 0 160px !important
+    .shape-content
+      top: -70px !important
+      right: -260px !important
+  .about-card
+    .card-title
+      padding-inline: 40px !important
+  .about-bottom-banner
+    max-width: 400px !important
+    margin-inline: auto !important
+    margin-bottom: 40px !important
+  .about-bottom-content
+    padding-inline: 50px !important
+  .features
+    .h2
+      font-size: 32px
+  .cta-title
+    font-size: 42px !important
+  .cta-form
+    @include flex(center, flex-end)
+    gap: 30px
+  .cta
+    input
+      margin-bottom: 0 !important
+    .btn-secondary
+      min-width: max-content !important
+  .contact-title
+    font-size: 32px !important
+  .contact-banner
+    max-width: 300px !important
+    margin-inline: auto !important
+
+// Responsive For > 560px
+@media screen and (min-width: 560px)
+  .container
+    max-width: 550px !important
+    margin-inline: auto !important
+  .navbar
+    top: calc( 100% + 15px ) !important
+    right: 0 !important
+  .navbar-wrapper
+    position: relative !important
+  .hero-content,
+  .about-bottom-content
+    text-align: left !important
+  .hero .btn-primary,
+  .about-bottom .btn-secondary
+    margin-inline: 0 !important
+  .hero
+    .shape-content
+      top: -156px !important
+      right: -152px !important
+  .footer-brand
+    margin-bottom: 40px !important
+  .footer-link-box
+    display: grid
+    grid-template-columns: 1fr 1fr
+
+// Responsive For > 768px
+@media screen and (min-width: 768px)
+  $fs-2: 35px
+  $fs-4: 20px
+  .h2
+    font-size: $fs-2 !important
+  .hero-text
+    font-size: $fs-4 !important
+  .section-text
+    font-size: $fs-4 !important
+  .item-text
+    font-size: $fs-4 !important
+  .h4
+    font-size: $fs-4 !important
+  .container
+    max-width: 740px !important
+  .about-list
+    grid-template-columns: 1fr 1fr !important
+    .about-card
+      height: 100% !important
+      @include flex(space-between, center)
+      flex-direction: column !important
+    .card-title
+      padding-inline: 0 !important
+  .contact
+    .section-title
+      font-size: 42px !important
+
+// Responsive For > 1024px
+@media screen and (min-width: 1024px)
+  .container
+    max-width: 950px !important
+  .navbar-menu-btn
+    display: none !important
+  .navbar
+    max-height: unset !important
+    visibility: visible !important
+    position: sticky !important
+    top: 0 !important
+    width: auto !important
+    background: none !important
+    pointer-events: all !important
+    overflow: visible !important
+    display: flex !important
+    &-list
+      display: flex !important
+      align-items: center !important
+      gap: 10px !important
+      margin-right: 20px !important
+    .nav-link
+      opacity: 1 !important
+      padding: 0 15px !important
+    .btn-primary
+      display: block !important
+  .hero-content
+    max-width: 550px !important
+  .hero-banner
+    display: block !important
+    position: absolute !important
+    top: 50% !important
+    right: 0 !important
+    transform: translateY(-50%) !important
+    width: 500px !important
+    padding-top: 500px !important
+    background: url(../../images/hero-banner.png) no-repeat !important
+    background-size: contain !important
+  .about-top
+    .section-text
+      max-width: 650px !important
+      margin-inline: auto !important
+  .about-list
+    grid-template-columns: repeat(3, 1fr) !important
+  .about-bottom
+    @include flex(space-between, center)
+    &-banner
+      margin-bottom: 0 !important
+      height: 330px !important
+    &-content
+      padding-inline: 0 !important
+      width: 50% !important
+  .features
+    &:is(.section-title, .section-text)
+      max-width: 650px !important
+      padding-inline: auto !important
+    .feature-item
+      display: flex !important
+      align-items: center !important
+      gap: 50px !important
+      &-banner
+        margin-bottom: 0 !important
+        margin-inline: auto !important
+      &-content
+        width: 50% !important
+        text-align: left !important
+      &:last-child
+        flex-direction: row-reverse !important
+  .cta-card > *
+    max-width: 550px !important
+    margin-inline: auto !important
+  .contact
+    .container
+      @include flex(space-between, center)
+      gap: 50px !important
+    &-content
+      max-width: 400px !important
+    .section-title
+      text-align: left !important
+    &-form
+      width: 50% !important
+  .footer-top
+    .container
+      @include flex(space-between, center)
+      gap: 50px !important
+      .footer-brand,
+      .footer-link:not(:last-child)
+        margin-bottom: 0 !important
+      .footer-link-box
+        grid-template-columns: repeat(4, 1fr) !important
+        gap: 50px !important
+
+// Responsive For > 1200px
+@media screen and (min-width: 1200px)
+  $fs-2: 42px
+  .h2
+    font-size: $fs-2 !important
+  .hero-text
+    font-size: $fs-4 !important
+  .container
+    max-width: 1150px !important
+  .hero-banner
+    right: 100px !important
+  .about-bottom-banner
+    height: 400px !important
+  .features
+    .h2
+      font-size: 42px !important
+    &:is(.section-title, .section-text)
+      max-width: 850px !important
