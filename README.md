@@ -1,7 +1,7 @@
 <div align="center">
-  ![GitHub stars](https://img.shields.io/github/repo-size/AbdElRhman492/Landing-Page)
+  ![GitHub repo size](https://img.shields.io/github/repo-size/AbdElRhman492/Landing-Page)
   ![GitHub stars](https://img.shields.io/github/stars/AbdElRhman492/Landing-Page?style=social)
-  ![GitHub stars](https://img.shields.io/github/forks/AbdElRhman492/Landing-Page?style=social)
+  ![GitHub forks](https://img.shields.io/github/forks/AbdElRhman492/Landing-Page?style=social)
 
   <br />
   <br />
